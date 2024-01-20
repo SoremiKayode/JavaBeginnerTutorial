@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- What can javascript do?  -->
+
+<!-- Javascript can change html content  -->
+<h1 id="learn">I am learning web development</h1>
+<button onclick="changeText()">Change Me</button>
+
+<!-- 
+You can also do this without creating any function below
+<button onclick="document.getElementById('learn').innerHTML = 'God is good' ">Change Me</button>
+-->
+
+<script>
+var learnContent = document.getElementById("learn");
+
+function changeText(){
+    learnContent.innerHTML = "I am learning Javascript.";
+}
+</script>
+
+<!-- 2. Javscript can change html attribute, in this example we are changing
+the src attribute of the image -->
+<div>
+<button onclick="document.getElementById('myImage').src = 'on_light_bulb.gif'">Turn on the light</button>
+<img id="myImage" src="off_light_bulb.gif" alt="" width="100">
+<button onclick="document.getElementById('myImage').src = 'off_light_bulb.gif'">Turn off the light</button>
+
+<!-- 3. Javascript can change html style, we are changing the color and font
+size of the element below -->
+<h2 id="styleChange">This is an Amazing learning experience</h2>
+<button onclick="document.getElementById('styleChange').style = 'font-size : 50px; color : red' ">Change Style</button>
+</div>
+
+<!-- 4. Javascript cna hide or show html element -->
+<h2 id="hide-show"> Click Button below to hide or show me </h2>
+<button onclick="document.getElementById('hide-show').style.display = 'none' ">Hide element</button>
+<button onclick="document.getElementById('hide-show').style.display = 'block' ">Show Me</button>
+
+<!-- 5.
+We can use javascript to create a server and send data
+- To do that you will need to download and install nodejs
+open your command prompt and type node --version to check if nodejs is installed
+- after installing nodejs, then go ahead and initialize npm (node package manager) in
+your directory by doing npm init -y
+- still in your command prompt, type npm install express to install express
+- Look at index.js for how to create a server that send data
+-->
+
+</body>
+</html>
