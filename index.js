@@ -29,8 +29,9 @@ res.setHeader('Content-Type', 'text/html');
 res.send(htmlContent);
 })
 
-// instantiate the server and make it liosten on port 3000
+// instantiate the server and make it listen on port 3000
 // you can access it in your browser at http://localhost:3000
+// run node index.js in your command prompt to start server
 app.listen(3000, () => {
 console.log("Server is running at http://localhost:3000");
 });

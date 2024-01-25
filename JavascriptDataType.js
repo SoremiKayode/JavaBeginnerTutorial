@@ -1,0 +1,11 @@
+/*
+Javascript data type can be categorised into 
+String
+Number
+BigInt
+Boolean
+Object
+Undefined
+null
+symbol
+*/

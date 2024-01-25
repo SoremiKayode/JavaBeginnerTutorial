@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- Javascrpt can be placed in the head section and below  -->
+<script>
+const changeCont = ()=> {
+document.getElementById("whereTo").innerHTML = "This is where should place your Javascript";
+}
+</script>
+</head>
+<body>
+<h1 id="whereTo">This is where should place your script tag</h1>
+<button onclick="changeCont()">Click to change</button>
+<button onclick="testExternal()">Click for External Change</button>
+<!-- 
+javascript code in html should be inside the script tag, where in html file 
+should we place our script tag
+inside the body like below
+-->
+
+<script>
+document.getElementById("whereTo").innerHTML = "This is where should place your JavaScript tag";
+</script>
+
+<!-- javascript can be in an external file 
+we create a javascript file and call it externalTest, there we write a code
+that when a user click on the "click for external change button the code will run"
+to run the file we link it to this file like below
+-->
+<script src="externalTest.js"></script>
+</body>
+</html>

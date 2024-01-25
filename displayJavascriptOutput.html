@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display Javascript Output</title>
+</head>
+<body>
+<!-- display using innerHTML -->
+<h2 id="changeToday">Today is such a great day</h2>
+<button onclick="changeDay()">Click to change day</button>
+
+<script>
+const changeDay = () => {
+document.getElementById("changeToday").innerHTML = "Tomorrow is such a great day";
+
+}
+</script>
+<!-- 
+display using window.alert, a pop up will appear in the browser showing
+what the text display, you can simply use alert
+-->
+<script>
+alert("Hello world!");
+</script>
+
+<!-- 
+display using console.log 
+To check the ouptut of the console.log,
+open the file in your browser
+right click and select inspect
+on page is plitinto two section, the right section have some tab at the top,
+you will see console there, click on it and you will see the output
+-->
+<script>
+console.log("Hello world!");
+</script>
+
+<!-- display using document.write
+This will write into the page
+-->
+<script>
+document.write("Hello world!");
+</script>
+<br>
+<br>
+<!-- 
+You can also use window.print to print out the content of your document
+ -->
+ <Button onclick="window.print()">Print Page</Button>
+
+</body>
+</html>
