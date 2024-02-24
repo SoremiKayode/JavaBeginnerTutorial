@@ -18,6 +18,9 @@ JavascriptBeginnerCourse
 ------------------/javascriptNumbers.js
 ------------------/javascriptArray.js
 ------------------/product_array.html
+------------------/javascriptObject.js
+------------------/javascriptConditions.js
+------------------/javascriptSwitchStatement.js
 
 * index.html : This is the firt file in this repository, file contain what can javscript do with javacsript, read every comment in this file, this file will lead you to the index.js file, where we a web server in express
 * whereTo.html : This is file shows differrent places to place the javscript tag
@@ -29,3 +32,6 @@ JavascriptBeginnerCourse
 * javascriptNumbers.js : Contain information on number and all the method and properties of number
 * javascriptArray.js : this file handle usin array in javascript, it cover all the array methods, looping through an array, creating a random an array
 * product_array.html : this html file display ecommerce product using dummy data fetch from an array, it teaches how to loop through an array and display a product
+* javascriptObject.js : This file contains information on how to use javascript object
+* javascriptConditions.js : This file contains information on how to use conditions in javascript, the if, if else, and else
+* javascriptSwitchStatement.js : This file contains information on how to use the switch statement
