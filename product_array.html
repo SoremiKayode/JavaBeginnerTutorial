@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Mini Shop
+        </title>
+<script src="https://use.fontawesome.com/fd7f293ceb.js"></script>
+<style>
+#inserData {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pro-det {
+    flex-grow: 1;
+    width: 32%;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 5px 5px #ddd;
+    border: 1px solid #ddd;
+}
+  p.slash {
+    text-decoration: line-through;
+    color: red;
+}
+p.title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Tahoma;
+}
+p.desc {
+    max-width: 80%;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}.price {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+}
+h1{
+    text-align: center; 
+    margin: 50px 0px 30px;
+    text-transform: uppercase;
+    font-family: Verdana, sans-serif;
+}
+.footer{
+    text-align: center; margin: 50px 0px 20px;
+}
+.image {
+max-width: 80%;
+height: 200px;
+}
+</style>
+    </head>
+    <body>
+<!--Here we're going to create an ecommerce store product listing,
+the listing will contain the following,
+- product title,
+- product image
+- product description and
+- product rating
+-->
+                       
+<div>
+<h1>Electronic Store</h1>
+</div>
+<!-- we will display the product here -->
+<div id="inserData"></div>
+
+<script>
+// array of containing all details needed
+const productDatabase = [
+["image_folder/iphone13.jpeg", "Apple iPhone 13", "The latest iPhone with advanced camera features and powerful performance.", 1000, 1200, "1.5"],
+["image_folder/galaxy.jpeg", "Samsung Galaxy Watch 4", "A stylish and feature-packed smartwatch with fitness tracking capabilities.", 400, 500, "2.8"],
+["image_folder/sony.jpeg", "Sony WH-1000XM4 Wireless Headphonese", "Industry-leading noise-canceling headphones with exceptional sound quality.", 600, 800, "4.9"],
+["image_folder/amazon.jpeg", "Amazon Echo Dot", "A compact smart speaker with Alexa voice control for hands-free convenience.", 400, 899, "4.7"],
+["image_folder/zoom.jpeg", "Nike Air Zoom Pegasus 38 Running Shoes", "High-performance running shoes designed for comfort and speed.", 120, 300, "3.6"],
+["image_folder/flip.jpeg", "Galaxy Flip 5", "Galaxy Z Flip5 has a 3.4-inch Flex Window that supports more widgets", 900, 1299, "5"]    
+];
+
+// we get the object of the element we want to insert the product
+// into
+var dataObject = document.getElementById("inserData");
+// we create an emptystring string to hold the elements
+var dataString = "";
+// we  create an empty string to hold the rating
+var startRating = "";
+// we create variable to hold rating elements from 1 - 5
+var startRating1 = `
+<span>
+ <i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+</span> 
+`;
+
+startRating2 = `
+<span>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+</span> 
+`;
+
+startRating3 = `
+<span>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+</span>
+`;
+
+startRating4 = `
+<span>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star-o" aria-hidden="true"></i>
+</span>
+`;
+
+startRating5 = `
+<span>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+</span>
+`;
+
+// we loop through the array and display the data
+productDatabase.forEach((e)=> {
+// we assign each rating element to the startRating variable base on the rating from the array
+if(e[5] > 0 && e[5] < 2) {
+startRating = startRating1;
+} else if (e[5] > 1 && e[5] < 3) {
+startRating = startRating2;
+} else if (e[5] > 2 && e[5] < 4) {
+startRating = startRating3;
+} else if (e[5] > 3 && e[5] < 5) {
+startRating = startRating4;
+} else if (e[5] >= 5){
+startRating = startRating5;
+}
+
+// we concatenate each element to the datasString variable
+dataString += `
+<div class="pro-det">
+<p><img class="image" src="${e[0]}" /></p>
+<p class="title">${e[1]}</p>
+<p class="price">$${e[3]}</p>
+<p class="slash">$${e[4]}</p>
+<p>${startRating}</p>
+</div>`;
+});
+
+// we insert the element into the DOM
+dataObject.innerHTML = dataString;
+</script>
+<div class="footer">2024 Copyright, All Right Reserved.</div>
+</body>
+</html>

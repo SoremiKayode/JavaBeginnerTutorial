@@ -115,10 +115,25 @@ let varToNumber3 = false;
 let varToNumber4 = "4.5";
 let varToNumber5 = "John";
 
-// The number method can be use to conver string and boolean to number
+// The Number() method can be use to conver string and boolean to number
 console.log(Number(varToNumber));
 console.log(Number(varToNumber2)); // return 1
 console.log(Number(varToNumber3)); // false return 0
 console.log(Number(varToNumber4));
 console.log(Number(varToNumber5)); // john return NaN
-// You can also use the number method to convert data to number
+// You can also use the number method to convert date to number
+console.log(Number(new Date("03-09-1994")));
+
+// parseFloat converts a string to a floating Number
+console.log(parseFloat("30"));
+console.log(parseFloat("30.5"));
+console.log(parseFloat("30 20 20")); // when they are spaces bewteen the number returned the first number
+console.log(parseFloat("10 years")); // same rule apply here
+console.log(parseFloat("years 10")); // return NaN
+
+// parseInt converts a string to a floating Number
+console.log(parseInt("-30"));
+console.log(parseInt("30.5"));
+console.log(parseInt("30 20 20")); // when they are spaces bewteen the number returned the first number
+console.log(parseInt("10 years")); // same rule apply here
+console.log(parseInt("years 10")); // return NaN
